@@ -2,11 +2,11 @@ use std::io;
 
 fn main() {
     println!("Clothes Picker!");
+    println!("Insert add to add an item\nInsert remove to remove an item\nInsert list to see all your items\nInsert get to get an outfit today");
 
     let mut action = String::new();
 
-    io::stdin().read_line(&mut action)
-        .expect("Failed to read line");
+    io::stdin().read_line(&mut action).unwrap();
 
     let action = action.trim();
 
